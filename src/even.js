@@ -27,19 +27,3 @@ Let's try again, ${name}!`);
 };
 
 export default checkResult;
-
-/* for (let i = 0; i <= 3; i += 1) {
-  const randomNumber = Math.floor(Math.random() * 50);
-  const randomNumberEven = randomNumber % 2 === 0 ? 'yes' : 'no';
-  console.log(`Question: ${randomNumber}`);
-  const inputAnswer = readlineSync.question('Your answer: ');
-  if (randomNumberEven === inputAnswer) {
-    console.log('Correct!');
-  } else {
-    i = 0;
-    console.log(`${inputAnswer} is wrong answer ;(. Correct answer was ${randomNumberEven}.
-Let's try again, ${name}!`);
-  }
-} console.log(`Congratulations, ${name}!`);
-};
-export default checkResult; */
