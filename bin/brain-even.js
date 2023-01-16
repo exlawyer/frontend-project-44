@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import checkResult from '../src/even.js';
+import checkResult from '../src/games/even.js';
 
 checkResult();

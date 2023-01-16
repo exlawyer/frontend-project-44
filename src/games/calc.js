@@ -1,6 +1,6 @@
 import {
   mathOperator, getRandomNum, gameTemplate,
-} from './index.js';
+} from '../index.js';
 
 const calculator = () => {
   const toDo = 'What is the result of the expression?';
