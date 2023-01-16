@@ -12,18 +12,6 @@ const mathOperator = () => {
   return operator;
 };
 
-// const makeRandMathOperation = (x, y, z) => {
-//   switch (y) {
-//     case '+': y = x + z;
-//       break;
-//     case '-': y = x - z;
-//       break;
-//     case '*': y = x * z;
-//       break;
-//     default: false;
-//   }
-// };
-
 const gameTemplate = (toDo, task) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');

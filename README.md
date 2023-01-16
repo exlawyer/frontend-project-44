@@ -6,3 +6,5 @@
 ### Asciinema of brain-even game initialisation:
 <a href="https://asciinema.org/a/MaucyK9FBuf1iBnu2LVAJ52bS" target="_blank"><img src="https://asciinema.org/a/MaucyK9FBuf1iBnu2LVAJ52bS.svg" /></a>
 
+### Asciinema of brain-calc game initialisation:
+[![asciicast](https://asciinema.org/a/KBfgyBvwTjCiLVz1MEDcWDlbT.svg)](https://asciinema.org/a/KBfgyBvwTjCiLVz1MEDcWDlbT)
