@@ -16,8 +16,8 @@ const progression = () => {
     const numberToHide = Math.floor(Math.random() * numbers.length);
     const correctAnswer = numbers[numberToHide].toString();
     numbers[numberToHide] = '..';
-    numbers.join(' ');
-    const expression = numbers.toString();
+    const term = numbers.join(' ');
+    const expression = term.toString();
     return [expression, correctAnswer];
   };
   gameTemplate(toDo, result);

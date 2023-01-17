@@ -11,3 +11,6 @@
 
 ### Asciinema of brain-gcd game initialization:
 [![asciicast](https://asciinema.org/a/3c7sjX6pMuctBxHahwSbXlu8Z.svg)](https://asciinema.org/a/3c7sjX6pMuctBxHahwSbXlu8Z)
+
+### Asciinema of brain-progression game initialization:
+[![asciicast](https://asciinema.org/a/On4OONip0GjLQqB0CLgNa204v.svg)](https://asciinema.org/a/On4OONip0GjLQqB0CLgNa204v)
