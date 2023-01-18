@@ -12,6 +12,16 @@ const mathOperator = () => {
   return operator;
 };
 
+const isPrime = (num) => {
+  if (num < 2) return 'no';
+  const q = Math.floor(Math.sqrt(num));
+  for (let i = 2; i <= q; i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  } return 'yes';
+};
+
 const gameTemplate = (toDo, task) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
@@ -33,5 +43,5 @@ Let's try again, ${name}!`);
 };
 
 export {
-  mathOperator, getRandomNum, gameTemplate,
+  mathOperator, getRandomNum, gameTemplate, isPrime,
 };

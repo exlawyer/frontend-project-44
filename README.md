@@ -14,3 +14,6 @@
 
 ### Asciinema of brain-progression game initialization:
 [![asciicast](https://asciinema.org/a/On4OONip0GjLQqB0CLgNa204v.svg)](https://asciinema.org/a/On4OONip0GjLQqB0CLgNa204v)
+
+### Asciinema of brain-prime game initialization:
+[![asciicast](https://asciinema.org/a/GfTFwHPtRGcM3uPfAnXbXTTVg.svg)](https://asciinema.org/a/GfTFwHPtRGcM3uPfAnXbXTTVg)
