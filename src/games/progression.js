@@ -1,26 +1,31 @@
 import {
-  gameTemplate,
+  gameTemplate, getRandomNum
 } from '../index.js';
 
-const progression = () => {
-  const toDo = 'What number is missing in the progression?';
-  const result = () => {
-    const progrStep = Math.floor(Math.random() * 20);
-    const numbers = [];
-    const arrLength = Math.floor(Math.random() * (20 - 5) + 5);
-    let firstNum = Math.floor(Math.random() * 50 + 1);
-    for (let i = 0; i <= arrLength; i += 1) {
-      numbers.push(firstNum);
-      firstNum += progrStep;
-    }
-    const numberToHide = Math.floor(Math.random() * numbers.length);
-    const correctAnswer = numbers[numberToHide].toString();
-    numbers[numberToHide] = '..';
-    const term = numbers.join(' ');
-    const expression = term.toString();
-    return [expression, correctAnswer];
-  };
-  gameTemplate(toDo, result);
+const generateProgression = (firstNumber, step, length) => {
+  const numbers = [];
+   for (let i = 0; i <= length; i += 1) {
+     numbers.push(firstNumber);
+     firstNumber += step;
+   } 
+   return numbers;
 };
 
-export default progression;
+const toDo = 'What number is missing in the progression?';
+
+const progression = () => {
+  let firstNum = getRandomNum(50);
+  const progrStep = getRandomNum (20);
+  const progrLength = getRandomNum((20-5), 5);
+  const fullProgression = generateProgression(firstNum, progrStep, progrLength);  
+  const numberToHide = getRandomNum(fullProgression.length);
+  const correctAnswer = fullProgression[numberToHide].toString();
+  fullProgression[numberToHide] = '..';
+  const toJoin = fullProgression.join(' ');
+  const expression = toJoin.toString();
+    return [expression, correctAnswer];
+  };
+
+const startProgressionGame = ()=> gameTemplate(toDo, progression);
+
+export default startProgressionGame;

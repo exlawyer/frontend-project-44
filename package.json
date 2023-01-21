@@ -10,7 +10,7 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "description": "[![Actions Status](https://github.com/exlawyer/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/exlawyer/frontend-project-44/actions)",
+  "description": "set of games with numbers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

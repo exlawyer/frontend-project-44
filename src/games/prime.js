@@ -1,14 +1,23 @@
-import { getRandomNum, gameTemplate, isPrime } from '../index.js';
+import { getRandomNum, gameTemplate } from '../index.js';
 
-const prime = () => {
-  const toDo = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const result = () => {
-    const number = getRandomNum();
-    const correctAnswer = isPrime(number).toString();
-    const expression = number.toString();
-    return [expression, correctAnswer];
-  };
-  gameTemplate(toDo, result);
+const isPrime = (num) => {
+  const sqRoot = Math.floor(Math.sqrt(num));
+  for (let i = 2; i <= sqRoot; i += 1) {
+    if (num % i === 0 || num < 2) {
+      return false;
+    }
+  } return true;
 };
 
-export default prime;
+const toDo = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const prime = () => {
+  const number = getRandomNum();
+  const correctAnswer = (isPrime(number)) ? 'yes' : 'no';
+  const expression = number.toString();
+  return [expression, correctAnswer];
+};
+
+const startPrimeGame = ()=> gameTemplate(toDo, prime);
+
+export default startPrimeGame;

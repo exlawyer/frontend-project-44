@@ -1,25 +1,8 @@
 import readlineSync from 'readline-sync';
 
-const getRandomNum = () => {
-  const random = Math.floor(Math.random() * 30 + 1);
+const getRandomNum = (max = 30, step = 1) => {
+  const random = Math.floor(Math.random() * max + step);
   return random;
-};
-
-const mathOperator = () => {
-  const operators = ['+', '-', '*'];
-  const operatorSelection = Math.floor(Math.random() * operators.length);
-  const operator = operators[operatorSelection];
-  return operator;
-};
-
-const isPrime = (num) => {
-  if (num < 2) return 'no';
-  const q = Math.floor(Math.sqrt(num));
-  for (let i = 2; i <= q; i += 1) {
-    if (num % i === 0) {
-      return 'no';
-    }
-  } return 'yes';
 };
 
 const gameTemplate = (toDo, task) => {
@@ -43,5 +26,5 @@ Let's try again, ${name}!`);
 };
 
 export {
-  mathOperator, getRandomNum, gameTemplate, isPrime,
+  getRandomNum, gameTemplate, 
 };

@@ -1,27 +1,37 @@
 import {
-  mathOperator, getRandomNum, gameTemplate,
+  getRandomNum, gameTemplate,
 } from '../index.js';
 
-const calculator = () => {
-  const toDo = 'What is the result of the expression?';
-  const result = () => {
-    const firstNum = getRandomNum();
-    const lastNum = getRandomNum();
-    let operator = mathOperator();
-    const expression = `${firstNum} ${operator} ${lastNum}`;
-    switch (operator) {
-      case '+': operator = firstNum + lastNum;
-        break;
-      case '-': operator = firstNum - lastNum;
-        break;
-      case '*': operator = firstNum * lastNum;
-        break;
-      default: return false;
-    }
-    const correctAnswer = operator.toString();
-    return [expression, correctAnswer];
-  };
-  gameTemplate(toDo, result);
+const mathOperator = () => {
+  const operators = ['+', '-', '*'];
+  const operatorSelection = Math.floor(Math.random() * operators.length);
+  return operators[operatorSelection];
 };
 
-export default calculator;
+const getResult = (num1, num2, operand) => {
+  switch (operand) {
+    case '+': operand = num1 + num2;
+      break;
+    case '-': operand = num1 - num2;
+      break;
+    case '*': operand = num1 * num2;
+      break;
+    default: throw new Error(`Unknown operator: '${operator}'!`);
+    }
+  return operand.toString();
+};
+
+const toDo = 'What is the result of the expression?';
+  
+const calculator = () => {
+  const firstNum = getRandomNum();
+  const lastNum = getRandomNum();
+  let operator = mathOperator();
+  const expression = `${firstNum} ${operator} ${lastNum}`;
+  const correctAnswer = getResult(firstNum, lastNum, operator);
+  return [expression, correctAnswer];
+};
+
+const startCalcGame = ()=> gameTemplate(toDo, calculator);
+
+export default startCalcGame;

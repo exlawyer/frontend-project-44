@@ -1,13 +1,16 @@
 import { getRandomNum, gameTemplate } from '../index.js';
 
-const checkResult = () => {
-  const toDo = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const result = () => {
-    const randNumber = getRandomNum();
-    const correctAnswer = randNumber % 2 === 0 ? 'yes' : 'no';
-    const expression = randNumber.toString();
-    return [expression, correctAnswer];
+const isEven = (num) => num % 2 === 0 ? 'yes' : 'no';
+
+const toDo = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const even = () => {
+  const randNumber = getRandomNum();
+  const correctAnswer = isEven(randNumber);
+  const expression = randNumber.toString();
+  return [expression, correctAnswer];
   };
-  gameTemplate(toDo, result);
-};
-export default checkResult;
+
+const startEvenGame = ()=> gameTemplate(toDo, even);
+
+export default startEvenGame;
