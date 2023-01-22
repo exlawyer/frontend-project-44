@@ -5,14 +5,14 @@ const findGcd = (num1, num2) => {
   if (num1 > num2) {
     min = num2;
   } min = num1;
-  
+
   let divider;
   for (let i = min; i >= 1; i -= 1) {
     if (num1 % i === 0 && num2 % i === 0) {
       divider = i;
       break;
     }
-} return divider.toString();
+  } return divider.toString();
 };
 
 const toDo = 'Find the greatest common divisor of given numbers.';
@@ -22,9 +22,9 @@ const gcd = () => {
   const lastNum = getRandomNum();
   const expression = `${firstNum} ${lastNum}`;
   const correctAnswer = findGcd(firstNum, lastNum);
-    return [expression, correctAnswer];
-  };
+  return [expression, correctAnswer];
+};
 
-const startGcdGame = ()=> gameTemplate(toDo, gcd);
+const startGcdGame = () => gameTemplate(toDo, gcd);
 
 export default startGcdGame;

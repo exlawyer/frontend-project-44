@@ -18,6 +18,6 @@ const prime = () => {
   return [expression, correctAnswer];
 };
 
-const startPrimeGame = ()=> gameTemplate(toDo, prime);
+const startPrimeGame = () => gameTemplate(toDo, prime);
 
 export default startPrimeGame;

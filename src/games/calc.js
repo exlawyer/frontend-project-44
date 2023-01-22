@@ -9,29 +9,30 @@ const mathOperator = () => {
 };
 
 const getResult = (num1, num2, operand) => {
+  let result;
   switch (operand) {
-    case '+': operand = num1 + num2;
+    case '+': result = num1 + num2;
       break;
-    case '-': operand = num1 - num2;
+    case '-': result = num1 - num2;
       break;
-    case '*': operand = num1 * num2;
+    case '*': result = num1 * num2;
       break;
-    default: throw new Error(`Unknown operator: '${operator}'!`);
-    }
-  return operand.toString();
+    default: throw new Error(`Unknown operator: '${operand}'!`);
+  }
+  return result.toString();
 };
 
 const toDo = 'What is the result of the expression?';
-  
+
 const calculator = () => {
   const firstNum = getRandomNum();
   const lastNum = getRandomNum();
-  let operator = mathOperator();
+  const operator = mathOperator();
   const expression = `${firstNum} ${operator} ${lastNum}`;
   const correctAnswer = getResult(firstNum, lastNum, operator);
   return [expression, correctAnswer];
 };
 
-const startCalcGame = ()=> gameTemplate(toDo, calculator);
+const startCalcGame = () => gameTemplate(toDo, calculator);
 
 export default startCalcGame;

@@ -26,5 +26,5 @@ Let's try again, ${name}!`);
 };
 
 export {
-  getRandomNum, gameTemplate, 
+  getRandomNum, gameTemplate,
 };
