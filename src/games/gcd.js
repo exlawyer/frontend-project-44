@@ -12,7 +12,7 @@ const findGcd = (num1, num2) => {
       divider = i;
       break;
     }
-  } return divider.toString();
+  } return divider;
 };
 
 const toDo = 'Find the greatest common divisor of given numbers.';
@@ -21,7 +21,7 @@ const gcd = () => {
   const firstNum = getRandomNum(20);
   const lastNum = getRandomNum();
   const expression = `${firstNum} ${lastNum}`;
-  const correctAnswer = findGcd(firstNum, lastNum);
+  const correctAnswer = String(findGcd(firstNum, lastNum));
   return [expression, correctAnswer];
 };
 
